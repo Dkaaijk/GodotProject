@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://6sobx2l4x775"]
+
+[ext_resource type="Texture2D" uid="uid://f8n2dojhgo5u" path="res://Among Us.jpg" id="1_0ah50"]
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_nk0uu"]
+[ext_resource type="Texture2D" uid="uid://ddanliaxpch78" path="res://scenes/Cool Text - Among The Platforms 449908002900988.png" id="2_tdth2"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_nk0uu")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ah50")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.0
+offset_top = -109.0
+offset_right = 543.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tdth2")
+
+[node name="Start Game" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = 77.0
+offset_right = 130.0
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Start Game"
+
+[connection signal="pressed" from="Start Game" to="." method="_on_map_1_pressed"]

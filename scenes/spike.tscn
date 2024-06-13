@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnue2oio2y44m"]
+
+[ext_resource type="Texture2D" uid="uid://cwko7bbfahbdp" path="res://Traps/16-bit-spike-Sheet.png" id="1_ubvkd"]
+
+[sub_resource type="GDScript" id="GDScript_8pkwp"]
+script/source = "extends Area2D
+
+
+
+func _on_body_entered(body):
+	if (body.name == \"CharacterBody2D\"):
+		body.die()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7rfa"]
+size = Vector2(33, 36)
+
+[node name="spike" type="Area2D"]
+collision_layer = 0
+script = SubResource("GDScript_8pkwp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(115.5, 59)
+shape = SubResource("RectangleShape2D_h7rfa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(116, 64)
+scale = Vector2(2.04687, 2.84375)
+texture = ExtResource("1_ubvkd")
+region_enabled = true
+region_rect = Rect2(32, 0, 16, 16)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
