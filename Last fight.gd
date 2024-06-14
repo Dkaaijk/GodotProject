@@ -18,3 +18,4 @@ func add_points():
 
 func game_over():
 	$ScoreLabel.text = "Final Score: " + str(score)
+

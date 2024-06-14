@@ -1,8 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwpys8yfw0agn"]
+[gd_scene load_steps=13 format=3 uid="uid://dwpys8yfw0agn"]
 
 [ext_resource type="Script" path="res://Last fight.gd" id="1_afuaa"]
 [ext_resource type="Texture2D" uid="uid://bprnl3e6n7ghj" path="res://Terrain 2 (16x16).png" id="2_jmdl7"]
 [ext_resource type="PackedScene" uid="uid://b5ynooucbri2q" path="res://scenes/character_body_2d.tscn" id="3_n32l8"]
+[ext_resource type="Texture2D" uid="uid://owhqjs8ghukv" path="res://scenes/ezgif-7-d06069721e-gif-im/ezgif-7-d06069721e-gif-im/file(5).png" id="4_rfeb2"]
+[ext_resource type="Texture2D" uid="uid://bmgrf622hxifh" path="res://scenes/ezgif-7-d06069721e-gif-im/ezgif-7-d06069721e-gif-im/file(2).png" id="5_0nxhi"]
+[ext_resource type="Texture2D" uid="uid://db7evl63pflxa" path="res://scenes/ezgif-7-d06069721e-gif-im/ezgif-7-d06069721e-gif-im/file(3).png" id="6_otecv"]
+[ext_resource type="Texture2D" uid="uid://dxwnualle6hey" path="res://scenes/ezgif-7-d06069721e-gif-im/ezgif-7-d06069721e-gif-im/file(4).png" id="7_ugc71"]
+[ext_resource type="Texture2D" uid="uid://bsg4mfpvs3uhb" path="res://scenes/ezgif-7-d06069721e-gif-im/ezgif-7-d06069721e-gif-im/file(1).png" id="8_05i24"]
+[ext_resource type="Script" path="res://scenes/Button.gd" id="9_e2qqr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqcj6"]
 texture = ExtResource("2_jmdl7")
@@ -39,12 +45,15 @@ texture = ExtResource("2_jmdl7")
 12:0/0 = 0
 12:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 12:0/0/physics_layer_0/angular_velocity = 0.0
+12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:0/0 = 0
 13:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 13:0/0/physics_layer_0/angular_velocity = 0.0
+13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:0/0 = 0
 14:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 14:0/0/physics_layer_0/angular_velocity = 0.0
+14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:0/0 = 0
 15:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:0/0/physics_layer_0/angular_velocity = 0.0
@@ -448,6 +457,32 @@ texture = ExtResource("2_jmdl7")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_gqcj6")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ctxv6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rfeb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0nxhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_otecv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ugc71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_05i24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rfeb2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
 [node name="Last fight" type="Node2D"]
 script = ExtResource("1_afuaa")
 
@@ -456,14 +491,45 @@ texture_filter = 1
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_clhj1")
 format = 2
-layer_0/tile_data = PackedInt32Array(589832, 786432, 5, 589833, 786432, 5, 589834, 786432, 5, 589835, 786432, 5, 589836, 786432, 5, 589837, 786432, 5, 589838, 786432, 5, 589839, 786432, 5, 589840, 786432, 5, 589841, 786432, 5, 589842, 786432, 5, 589843, 786432, 5, 589844, 786432, 5, 589845, 786432, 5, 589831, 786432, 5, 589830, 786432, 5, 589829, 786432, 5, 589828, 786432, 5, 589827, 786432, 5)
+layer_0/tile_data = PackedInt32Array(589832, 786432, 5, 589833, 786432, 5, 589834, 786432, 5, 589835, 786432, 5, 589836, 786432, 5, 589837, 786432, 5, 589838, 786432, 5, 589839, 786432, 5, 589840, 786432, 5, 589841, 786432, 5, 589842, 786432, 5, 589843, 786432, 5, 589844, 786432, 5, 589845, 786432, 5, 589831, 786432, 5, 589830, 786432, 5, 589829, 786432, 5, 589828, 786432, 5, 589827, 786432, 5, 524291, 786432, 5, 458755, 786432, 5, 393219, 786432, 5, 327683, 786432, 5, 262147, 786432, 5, 196611, 786432, 5, 131075, 786432, 5, 65539, 786432, 5, 3, 786432, 5, 524309, 786432, 5, 458773, 786432, 5, 393237, 786432, 5, 327701, 786432, 5, 262165, 786432, 5, 196629, 786432, 5, 131093, 786432, 5, 65557, 786432, 5, 21, 786432, 5, 327690, 786432, 0, 327691, 851968, 0, 327692, 917504, 0)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_n32l8")]
-position = Vector2(517, -89)
+position = Vector2(514, -92)
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 398.0
-offset_top = 138.0
-offset_right = 701.0
-offset_bottom = 219.0
-text = "Final Score:"
+offset_left = 492.0
+offset_top = 294.0
+offset_right = 795.0
+offset_bottom = 375.0
+text = "Good job!!!!"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(265, 370)
+scale = Vector2(0.289157, 0.317269)
+sprite_frames = SubResource("SpriteFrames_ctxv6")
+autoplay = "default"
+frame_progress = 0.374713
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(909, 372)
+scale = Vector2(0.289157, 0.317269)
+sprite_frames = SubResource("SpriteFrames_ctxv6")
+autoplay = "default"
+frame_progress = 0.147859
+
+[node name="Button" type="Button" parent="."]
+offset_left = 334.0
+offset_top = 497.0
+offset_right = 789.0
+offset_bottom = 633.0
+text = "Back to Menu"
+script = ExtResource("9_e2qqr")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(545, 182)
+scale = Vector2(0.289157, 0.317269)
+sprite_frames = SubResource("SpriteFrames_ctxv6")
+autoplay = "default"
+frame_progress = 0.0985223
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
