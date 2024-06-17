@@ -480,7 +480,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 30.0
+"speed": 15.0
 }]
 
 [node name="Last fight" type="Node2D"]
@@ -508,14 +508,14 @@ position = Vector2(265, 370)
 scale = Vector2(0.289157, 0.317269)
 sprite_frames = SubResource("SpriteFrames_ctxv6")
 autoplay = "default"
-frame_progress = 0.374713
+frame_progress = 0.688919
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 position = Vector2(909, 372)
 scale = Vector2(0.289157, 0.317269)
 sprite_frames = SubResource("SpriteFrames_ctxv6")
 autoplay = "default"
-frame_progress = 0.147859
+frame_progress = 0.838949
 
 [node name="Button" type="Button" parent="."]
 offset_left = 334.0
@@ -530,6 +530,6 @@ position = Vector2(545, 182)
 scale = Vector2(0.289157, 0.317269)
 sprite_frames = SubResource("SpriteFrames_ctxv6")
 autoplay = "default"
-frame_progress = 0.0985223
+frame_progress = 0.827826
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
